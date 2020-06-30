@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.scss';
+import './resets.scss';
+import { Header } from './components/Header';
 
 const App = props => (
   <div className="app-wrapper">
-    <h1>Registration form</h1>
+    <Header />
   </div>
 );
 

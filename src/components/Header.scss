@@ -1,0 +1,25 @@
+.header-wrapper {
+  display: flex;
+  //position: fixed;
+  justify-content: space-between;
+  max-width: 1024px;
+  height: 60px;
+  margin: auto;
+  padding: 20px 30px;
+}
+
+.menu {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-right: 20px;
+
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+}
