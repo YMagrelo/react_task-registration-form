@@ -1,9 +1,36 @@
+@import '../mixins.scss';
+
 .about {
   position: relative;
   top: 60px;
   max-width: 1024px;
   height: 600px;
   margin: auto;
+  padding: 108px 0 0 30px;
   background: url('../assets/image/banner-photo.jpg');
   background-size: cover;
+}
+
+.content {
+  width: 600px;
+  padding-right: 66px;
+  color: #fff;
+
+  &__heading {
+    @include heading-1-desktop;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    line-height: 24px;
+    margin-bottom: 34px;
+  }
+
+  &__button {
+    width: 210px;
+    height: 38px;
+    color: #fff;
+  }
 }

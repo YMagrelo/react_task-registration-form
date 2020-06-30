@@ -10,19 +10,19 @@ export const Header = () => (
     <div className="menu">
       <ul className="menu__list">
         <li className="menu__item">
-          <a className="menu__link" href="?">About me</a>
+          <a className="menu__link" href="#?">About me</a>
         </li>
         <li className="menu__item">
-          <a className="menu__link" href="?">Relationships</a>
+          <a className="menu__link" href="#?">Relationships</a>
         </li>
         <li className="menu__item">
-          <a className="menu__link" href="?">Requirements</a>
+          <a className="menu__link" href="#?">Requirements</a>
         </li>
         <li className="menu__item">
-          <a className="menu__link" href="?">Users</a>
+          <a className="menu__link" href="#?">Users</a>
         </li>
         <li className="menu__item">
-          <a className="menu__link" href="?">Sign Up</a>
+          <a className="menu__link" href="#?">Sign Up</a>
         </li>
       </ul>
     </div>
