@@ -5,16 +5,16 @@ import logo from '../assets/logo/logo.svg';
 import burgerIcon from '../assets/logo/menu-icon.svg';
 import { MobileMenu } from './MobileMenu';
 
-export const Header = () => {
-  const [open, setOpen] = useState(false);
+export const Header = (props) => {
+  const [open, setOpen] = useState(true);
 
   return (
-    <header className="header-wrapper">
+    <header className={classNames('header-wrapper', { show: open })}>
       <div className="logo">
         <img src={logo} alt="company logo" />
       </div>
       <MobileMenu
-        isOpen={open}
+        open={open}
         setOpen={setOpen}
       />
       <div className="menu">

@@ -3,13 +3,21 @@
 .mobile-menu {
   display: none;
   position: relative;
-  top: 29px;
-  right: 150px;
-  &__list {
+  right: 152px;
+  bottom: 12px;
+  height: 40px;
+  padding-top: 10px;
+  background: $backgroundColor;
 
-    width: 290px;
+  &__logo {
+    padding: 2px 0 0 16px;
+  }
+  &__list {
+    position: relative;
+    top: 3px;
+    width: 292px;
     height: 246px;
-    padding: 25px 14px;
+    padding: 26px 16px;
     background: $backgroundColor;
     border-top: 0.3px solid rgba($color: #000000, $alpha: 0.3);
   }
@@ -25,7 +33,7 @@
 
 .closeMenu {
   position: absolute;
-  top: -20px;
+  top: 20px;
   right: 15px;
 
   &__inner {

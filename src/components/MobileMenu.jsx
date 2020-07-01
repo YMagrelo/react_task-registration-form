@@ -1,15 +1,19 @@
 import React from 'react';
 import './MobileMenu.scss';
 import classNames from 'classnames';
+import logo from '../assets/logo/logo.svg';
 
-export const MobileMenu = ({ isOpen, setOpen }) => (
-  <div className={classNames('mobile-menu', { show: isOpen })}>
+export const MobileMenu = ({ open, setOpen }) => (
+  <div className={classNames('mobile-menu', { show: open })}>
+    <div className="mobile-menu__logo">
+      <img src={logo} alt="company logo" />
+    </div>
     <div
       className="closeMenu"
       role="button"
       tabIndex={0}
-      onClick={() => setOpen(!isOpen)}
-      onKeyDown={() => setOpen(!isOpen)}
+      onClick={() => setOpen(!open)}
+      onKeyDown={() => setOpen(!open)}
     >
       <div className="closeMenu__inner closeMenu__inner--top" />
       <div className="closeMenu__inner closeMenu__inner--bottom" />
@@ -65,5 +69,6 @@ export const MobileMenu = ({ isOpen, setOpen }) => (
         <a className="mobile-menu__link" href="#?">Privacy Policy</a>
       </li>
     </ul>
+
   </div>
 );
