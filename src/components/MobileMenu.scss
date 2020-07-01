@@ -1,0 +1,46 @@
+@import '../variables.scss';
+
+.mobile-menu {
+  display: none;
+  position: relative;
+  top: 29px;
+  right: 150px;
+  &__list {
+
+    width: 290px;
+    height: 246px;
+    padding: 25px 14px;
+    background: $backgroundColor;
+    border-top: 0.3px solid rgba($color: #000000, $alpha: 0.3);
+  }
+
+  &__item {
+    height: 43px;
+  }
+}
+
+.mobile-menu.show {
+  display: block;
+}
+
+.closeMenu {
+  position: absolute;
+  top: -20px;
+  right: 15px;
+
+  &__inner {
+    width: 20px;
+    height: 3px;
+    background: darkblue;
+  }
+
+  &__inner--top {
+    transform: rotate(45deg);
+  }
+
+  &__inner--bottom {
+    position: relative;
+    top: -3px;
+    transform: rotate(-45deg);
+  }
+}

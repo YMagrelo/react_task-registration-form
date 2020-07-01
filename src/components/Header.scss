@@ -41,7 +41,11 @@
   .menu {
     &__burgerIcon {
       display: block;
-      padding-top: 2px;
+      position: relative;
+    }
+
+    &__burgerIcon.show {
+      left: -115px;
     }
 
     &__list {
