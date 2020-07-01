@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import logo from '../assets/logo/logo.svg';
+import burgerIcon from '../assets/logo/menu-icon.svg';
 
 export const Header = () => (
   <header className="header-wrapper">
@@ -8,6 +9,11 @@ export const Header = () => (
       <img src={logo} alt="company logo" />
     </div>
     <div className="menu">
+      <img
+        src={burgerIcon}
+        alt="icon to open menu"
+        className="menu__burgerIcon"
+      />
       <ul className="menu__list">
         <li className="menu__item">
           <a className="menu__link" href="#?">About me</a>

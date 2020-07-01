@@ -16,6 +16,10 @@
 }
 
 .menu {
+  &__burgerIcon {
+    display: none;
+  }
+  
   &__list {
     display: flex;
     justify-content: center;
@@ -30,5 +34,13 @@
 
   &__item:last-child {
     margin-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .menu {
+    &__list {
+      display: none;
+    }
   }
 }
