@@ -19,7 +19,7 @@
   &__burgerIcon {
     display: none;
   }
-  
+
   &__list {
     display: flex;
     justify-content: center;
@@ -37,10 +37,24 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 770px) {
   .menu {
+    &__burgerIcon {
+      display: block;
+      padding-top: 2px;
+    }
+
     &__list {
       display: none;
     }
+  }
+}
+
+@media (max-width: 380px) {
+  .header-wrapper {
+    max-width: 360px;
+    height: 40px;
+    margin: 0;
+    padding: 11px 15px;
   }
 }
