@@ -2,10 +2,10 @@ import React from 'react';
 import './App.scss';
 import './resets.scss';
 import { connect } from 'react-redux';
-import { Header } from './components/Header';
+import { Header } from './components/Header/Header';
 import { About } from './components/About';
 import { Requirements } from './components/Requirements';
-import { Persons } from './components/Persons';
+import { Persons } from './components/Persons/Persons';
 import { getUsersThunk } from './redux/reducer';
 
 const App = (props) => {

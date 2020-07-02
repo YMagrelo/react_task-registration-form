@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Header.scss';
 import classNames from 'classnames';
-import logo from '../assets/logo/logo.svg';
-import burgerIcon from '../assets/logo/menu-icon.svg';
+import logo from '../../assets/logo/logo.svg';
+import burgerIcon from '../../assets/logo/menu-icon.svg';
 import { MobileMenu } from './MobileMenu';
 
 export const Header = (props) => {

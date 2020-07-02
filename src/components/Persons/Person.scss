@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.person {
+  &__photo {
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    @include heading-2;
+  }
+
+  &__name,
+  &__position,
+  &__email,
+  &__phone,
+  &__photo {
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+

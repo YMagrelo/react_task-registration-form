@@ -1,7 +1,7 @@
 import React from 'react';
 import './MobileMenu.scss';
 import classNames from 'classnames';
-import logo from '../assets/logo/logo.svg';
+import logo from '../../assets/logo/logo.svg';
 
 export const MobileMenu = ({ open, setOpen }) => (
   <div className={classNames('mobile-menu', { show: open })}>

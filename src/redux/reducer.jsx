@@ -1,4 +1,4 @@
-import { getUsers } from "../api";
+import { getUsers } from '../api';
 
 const GET_USERS = 'GET_USERS';
 
@@ -11,7 +11,7 @@ export const reducer = (state = initialState, action) => {
     case GET_USERS:
       return {
         ...state,
-        users: [...state.users, action.payload],
+        users: [...state.users, ...action.payload],
       };
 
     default:
