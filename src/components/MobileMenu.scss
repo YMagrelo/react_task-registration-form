@@ -52,3 +52,20 @@
     transform: rotate(-45deg);
   }
 }
+
+@media (min-width: 380px) and (max-width: 780px) {
+  .mobile-menu {
+     right: 250px;
+     bottom: 10px;
+     padding-top: 20px;
+
+     &__logo {
+       position: relative;
+       bottom: 10px;
+     }
+
+     &__list {
+        width: 385px;
+     }
+  }
+}

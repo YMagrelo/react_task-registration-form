@@ -6,7 +6,7 @@ import burgerIcon from '../assets/logo/menu-icon.svg';
 import { MobileMenu } from './MobileMenu';
 
 export const Header = (props) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <header className={classNames('header-wrapper', { show: open })}>

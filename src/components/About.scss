@@ -36,6 +36,7 @@
 
 @media (max-width: 770px) {
   .about {
+    height: 500px;
     padding: 58px 0 0 30px;
   }
   .content {
@@ -64,6 +65,7 @@
 
 @media (max-width: 380px) {
   .about {
+    height: 400px;
     top: 40px;
     padding: 70px 0 0 0;
     background: url('../assets/image/banner-photo-min.jpg') no-repeat;
@@ -81,11 +83,12 @@
     }
 
     &__text {
+      height: 72px;
       padding: 0 10px;
       margin-bottom: 24px;
     }
 
-    &__text--whole {
+    &__text--hidden {
       display: none;
     }
   }
