@@ -1,7 +1,7 @@
 import React from 'react';
 import './Persons.scss';
 
-export const Persons = () => (
+export const Persons = ({users, getUsers}) => (
   <section className="persons">
     <h2 className="persons__heading">
   Our cheerful users
@@ -10,12 +10,15 @@ export const Persons = () => (
       Attention! Sorting users by registration date
     </p>
     <ul className="persons__list">
-      <li className="persons__item">1</li>
-      <li className="persons__item">2</li>
-      <li className="persons__item">3</li>
-      <li className="persons__item">4</li>
-      <li className="persons__item">5</li>
-      <li className="persons__item">6</li>
+      {users.map(user => (
+        <li className="persons__item" key={user.id}>{user.name}</li>
+      ))}
     </ul>
+    <button
+      type="button"
+      onClick={() => getUsers(1)}
+    >
+      get users
+    </button>
   </section>
 );
