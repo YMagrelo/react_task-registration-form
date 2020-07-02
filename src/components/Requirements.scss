@@ -5,12 +5,11 @@
   position: relative;
   max-width: 1024px;
   margin: auto;
-  padding: 152px 28px 0 53px;
+  padding: 152px 28px 125px 53px;
   top: 60px;
 
   &__heading {
     @include heading-1-desktop;
-    font-weight: 400;
     text-align: center;
     margin-bottom: 50px;
   }
