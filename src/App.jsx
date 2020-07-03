@@ -7,6 +7,7 @@ import { About } from './components/About';
 import { Requirements } from './components/Requirements';
 import { Persons } from './components/Persons/Persons';
 import { getUsersThunk } from './redux/reducer';
+import { RegistrationForm } from './components/RegistrationForm';
 
 const App = (props) => {
   const {users, getUsers, isLastPage} = props;
@@ -21,6 +22,7 @@ const App = (props) => {
         getUsers={getUsers}
         isLastPage={isLastPage}
       />
+      <RegistrationForm />
     </div>
   );
 };

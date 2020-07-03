@@ -5,7 +5,7 @@
   max-width: 1024px;
   position: relative;
   top: 60px;
-  padding: 150px 60px 140px 60px;
+  padding: 150px 60px 152px 60px;
   margin: auto;
   background-color: $backgroundColor2;
 
@@ -25,7 +25,8 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 90px;
-    grid-row-gap: 54px;
+    grid-row-gap: 90px;
+    margin-bottom: 35px;
   }
 
   &__item {

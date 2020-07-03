@@ -1,0 +1,39 @@
+@import '../mixins.scss';
+
+.registration {
+  position: relative;
+  top: 60px;
+  padding: 158px 0 0 0;
+  text-align: center;
+
+  &__heading {
+    @include heading-1-desktop;
+    margin-bottom: 18px;
+  }
+
+  &__underHeading {
+    width: 450px;
+    margin: auto;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__form {
+    border: 1px solid darkred;
+    width: 470px;
+    margin: auto;
+    text-align: left;
+  }
+}
+
+.form {
+
+  &__label {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  &__inputName {
+    //margin-top: 10px;
+  }
+}
