@@ -1,9 +1,9 @@
-@import '../mixins.scss';
+@import '../../mixins.scss';
 
 .registration {
   position: relative;
   top: 60px;
-  padding: 158px 0 0 0;
+  padding: 140px 0 0 0;
   text-align: center;
 
   &__heading {
@@ -19,7 +19,6 @@
   }
 
   &__form {
-    border: 1px solid darkred;
     width: 470px;
     margin: auto;
     text-align: left;
@@ -33,7 +32,18 @@
     padding-bottom: 10px;
   }
 
-  &__inputName {
-    //margin-top: 10px;
+  &__inputName,
+  &__inputEmail {
+    margin-bottom: 18px;
+  }
+
+  &__phonePrompt {
+    font-size: 12px;
+  }
+
+  &__file-name {
+    text-align: left;
+    width: 300px;
+    //margin-right: 100px;
   }
 }
