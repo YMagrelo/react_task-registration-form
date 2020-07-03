@@ -1,11 +1,13 @@
-import { getUsers } from '../api';
+import { getUsers, getPositions } from '../api';
 
 const GET_USERS = 'GET_USERS';
 const IS_LAST_PAGE = 'IS_LAST_PAGE';
+const GET_POSITIONS = 'GET_POSITIONS';
 
 const initialState = {
   users: [],
   isLastPage: false,
+  positions: [],
 };
 
 export const reducer = (state = initialState, action) => {
@@ -20,6 +22,12 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         isLastPage: action.payload,
+      };
+
+    case GET_POSITIONS:
+      return {
+        ...state,
+        positions: [...action.payload],
       };
 
     default:
@@ -37,6 +45,11 @@ const setIsLastPage = payload => ({
   payload,
 });
 
+const setPositions = payload => ({
+  type: GET_POSITIONS,
+  payload,
+});
+
 export const getUsersThunk = page => async(dispatch) => {
   const data = await getUsers(page);
 
@@ -48,5 +61,15 @@ export const getUsersThunk = page => async(dispatch) => {
 
   if (!data.links.next_url) {
     dispatch(setIsLastPage(true));
+  }
+};
+
+export const getPositionsThunk = () => async(dispatch) => {
+  const data = await getPositions();
+
+  if (data.success) {
+    dispatch(setPositions(data.positions));
+  } else {
+    alert(data.message);
   }
 };

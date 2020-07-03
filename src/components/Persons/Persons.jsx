@@ -24,7 +24,7 @@ export const Persons = ({ users, getUsers, isLastPage }) => {
         Attention! Sorting users by registration date
       </p>
       <ul className="persons__list">
-        {users.map(user => (
+        { users.map(user => (
           <li className="persons__item person" key={user.id}>
             <Person user={user} />
           </li>
