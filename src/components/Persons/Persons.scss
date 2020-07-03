@@ -2,9 +2,11 @@
 @import '../../mixins.scss';
 
 .persons {
+  max-width: 1024px;
   position: relative;
   top: 60px;
   padding: 150px 60px 140px 60px;
+  margin: auto;
   background-color: $backgroundColor2;
 
   &__heading {
@@ -37,5 +39,9 @@
     width: 210px;
     height: 40px;
     margin: auto;
+  }
+
+  &__warning {
+    text-align: center;
   }
 }

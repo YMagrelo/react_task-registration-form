@@ -1,9 +1,11 @@
 import { getUsers } from '../api';
 
 const GET_USERS = 'GET_USERS';
+const IS_LAST_PAGE = 'IS_LAST_PAGE';
 
 const initialState = {
   users: [],
+  isLastPage: false,
 };
 
 export const reducer = (state = initialState, action) => {
@@ -12,6 +14,12 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         users: [...state.users, ...action.payload],
+      };
+
+    case IS_LAST_PAGE:
+      return {
+        ...state,
+        isLastPage: action.payload,
       };
 
     default:
@@ -24,6 +32,11 @@ const setUsers = payload => ({
   payload,
 });
 
+const setIsLastPage = payload => ({
+  type: IS_LAST_PAGE,
+  payload,
+});
+
 export const getUsersThunk = page => async(dispatch) => {
   const data = await getUsers(page);
 
@@ -31,5 +44,9 @@ export const getUsersThunk = page => async(dispatch) => {
     dispatch(setUsers(data.users));
   } else {
     alert(data.message);
+  }
+
+  if (!data.links.next_url) {
+    dispatch(setIsLastPage(true));
   }
 };

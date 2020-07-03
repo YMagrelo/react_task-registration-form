@@ -1,11 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Persons.scss';
 import { Person } from './Person';
 
-export const Persons = ({ users, getUsers }) => {
+export const Persons = ({ users, getUsers, isLastPage }) => {
+  const [page, setPage] = useState(1);
+
   useEffect(() => {
-    getUsers(1);
+    getUsers(page);
+    setPage(page + 1);
   }, []);
+
+  const handleUsersLoad = () => {
+    setPage(page + 1);
+    getUsers(page);
+  };
 
   return (
     <section className="persons">
@@ -22,15 +30,18 @@ export const Persons = ({ users, getUsers }) => {
           </li>
         ))}
       </ul>
-      <div className="persons__button">
-        <button
-          type="button"
-          className="persons__button"
-        // onClick={() => getUsers(1)}
-        >
+      {!isLastPage ? (
+        <div className="persons__button">
+          <button
+            type="button"
+            className="persons__button"
+            onClick={() => handleUsersLoad()}
+          >
         Show more
-        </button>
-      </div>
+          </button>
+        </div>
+      )
+        : <h3 className="persons__warning">You have opened all users!</h3>}
 
     </section>
   );

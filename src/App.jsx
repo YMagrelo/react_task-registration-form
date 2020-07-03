@@ -9,7 +9,7 @@ import { Persons } from './components/Persons/Persons';
 import { getUsersThunk } from './redux/reducer';
 
 const App = (props) => {
-  const {users, getUsers} = props;
+  const {users, getUsers, isLastPage} = props;
 
   return (
     <div className="app-wrapper">
@@ -19,6 +19,7 @@ const App = (props) => {
       <Persons
         users={users}
         getUsers={getUsers}
+        isLastPage={isLastPage}
       />
     </div>
   );
@@ -26,6 +27,7 @@ const App = (props) => {
 
 const mapStateToProps = state => ({
   users: state.users,
+  isLastPage: state.isLastPage,
 });
 
 const mapDispatchToProps = dispatch => ({
