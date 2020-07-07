@@ -1,7 +1,14 @@
 import React from 'react';
 import './RegistrationForm.scss';
 import { reduxForm, Field } from 'redux-form';
-import { required, minLength2, maxLength60 } from '../../utils/validators';
+import {
+  required,
+  minLength2,
+  maxLength60,
+  maxLength100,
+  email,
+  phoneNumber,
+} from '../../utils/validators';
 import { Input } from '../common/FormControl';
 
 const RegistrationForm = (props) => {
@@ -32,6 +39,7 @@ const RegistrationForm = (props) => {
           type="email"
           id="name"
           placeholder="Your email"
+          validate={[required, minLength2, maxLength100, email]}
         />
       </div>
 
@@ -45,6 +53,7 @@ const RegistrationForm = (props) => {
           type="text"
           id="phone"
           placeholder="+380 XX XXX XX XX"
+          validate={[required, phoneNumber]}
         />
         <span className="form__phonePrompt">
             Enter phone number in open format
