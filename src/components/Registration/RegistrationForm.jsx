@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './RegistrationForm.scss';
-import 'bulma/css/bulma.css';
 import { reduxForm, Field } from 'redux-form';
+import { required, minLength2, maxLength60 } from '../../utils/validators';
+import { Input } from '../common/FormControl';
 
 const RegistrationForm = (props) => {
   const { handleSubmit, positions } = props;
@@ -11,26 +12,24 @@ const RegistrationForm = (props) => {
       <label htmlFor="name" className="form__label">
           Name
       </label>
-      <div>
+      <div className="form__inputName">
         <Field
           name="name"
-          component="input"
+          component={Input}
           type="text"
-          className="form__inputName input"
           id="name"
           placeholder="Your name"
+          validate={[required, minLength2, maxLength60]}
         />
       </div>
-
       <label htmlFor="email" className="form__label">
           Email
       </label>
-      <div>
+      <div className="form__inputEmail">
         <Field
           name="email"
-          component="input"
+          component={Input}
           type="email"
-          className="form__inputEmail input"
           id="name"
           placeholder="Your email"
         />
@@ -39,12 +38,11 @@ const RegistrationForm = (props) => {
       <label htmlFor="phone" className="form__label">
           Phone number
       </label>
-      <div>
+      <div className="form__inputPhone">
         <Field
           name="phone"
-          component="input"
+          component={Input}
           type="text"
-          className="form__inputPhone input"
           id="phone"
           placeholder="+380 XX XXX XX XX"
         />
@@ -81,9 +79,9 @@ Select your position
           Photo
       </label>
       <div>
-        <Field
+        <input
           component="input"
-          className="form__fileInput"
+          className="form__fileInput form-control-file"
           type="file"
           name="photo"
           id="photo"

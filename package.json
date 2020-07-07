@@ -7,6 +7,8 @@
   "author": "Mate Academy",
   "license": "GPL-3.0",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "bootstrap": "^4.5.0",
     "bulma": "^0.9.0",
     "classnames": "^2.2.6",
     "node-sass": "^4.14.1",

@@ -4,12 +4,15 @@
 
   &__label {
     display: block;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
   }
 
   &__inputName,
-  &__inputEmail {
-    margin-bottom: 18px;
+  &__inputEmail,
+  &__inputPhone,
+  &__fileInput {
+    width: 100%;
+    margin-bottom: 15px;
   }
 
   &__phonePrompt {
@@ -19,6 +22,5 @@
   &__file-name {
     text-align: left;
     width: 300px;
-    //margin-right: 100px;
   }
 }
