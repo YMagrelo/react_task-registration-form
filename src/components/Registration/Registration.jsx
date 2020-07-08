@@ -2,13 +2,16 @@ import React, { useEffect } from 'react';
 import './Registration.scss';
 import RegistrationForm from './RegistrationForm';
 
-export const Registration = ({ getPositions, positions }) => {
+export const Registration = ({ getPositions, positions, registration }) => {
   useEffect(() => {
     getPositions();
   }, []);
 
   const onSubmit = (formData) => {
     console.log(formData);
+    registration(
+      formData.name, formData.email, formData.phone, formData.positionId,
+    );
   };
 
   return (

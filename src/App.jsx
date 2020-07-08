@@ -6,7 +6,11 @@ import { Header } from './components/Header/Header';
 import { About } from './components/About';
 import { Requirements } from './components/Requirements';
 import { Persons } from './components/Persons/Persons';
-import { getUsersThunk, getPositionsThunk } from './redux/reducer';
+import {
+  getUsersThunk,
+  getPositionsThunk,
+  registrationThunk,
+} from './redux/reducer';
 import { Registration } from './components/Registration/Registration';
 
 const App = (props) => {
@@ -15,7 +19,8 @@ const App = (props) => {
     getUsers,
     isLastPage,
     getPositions,
-    positions
+    positions,
+    registration
   } = props;
 
   return (
@@ -31,6 +36,7 @@ const App = (props) => {
       <Registration
         getPositions={getPositions}
         positions={positions}
+        registration={registration}
       />
     </div>
   );
@@ -45,6 +51,10 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   getUsers: page => dispatch(getUsersThunk(page)),
   getPositions: () => dispatch(getPositionsThunk()),
+  registration:
+  (name, email, phone, positionId) => dispatch(
+    registrationThunk(name, email, phone, positionId),
+  ),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

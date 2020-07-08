@@ -73,3 +73,16 @@ export const getPositionsThunk = () => async(dispatch) => {
     alert(data.message);
   }
 };
+
+export const registrationThunk = (
+  name, email, phone, positionId,
+) => (dispatch) => {
+  const formData = new FormData();
+
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('phone', phone);
+  formData.append('position_id', positionId);
+  console.log(formData.get('position_id'));
+
+}

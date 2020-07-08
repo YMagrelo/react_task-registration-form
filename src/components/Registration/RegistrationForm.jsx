@@ -72,7 +72,7 @@ Select your position
               <label htmlFor={position.name}>
                 <Field
                   checked
-                  name="position_id"
+                  name="positionId"
                   component="input"
                   type="radio"
                   value={position.id}
