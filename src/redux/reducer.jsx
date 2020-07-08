@@ -90,5 +90,9 @@ export const registrationThunk = (
 
   const response = await registration(formData, token);
 
-  console.log(response);
+  if (response.success) {
+    const data = await getUsers(1);
+
+    dispatch(setUsers(data.users));
+  }
 };

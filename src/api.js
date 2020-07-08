@@ -10,5 +10,10 @@ export const getToken = () => fetch(`${BASE_URL}token`)
   .then(response => response.json());
 
 export const registration = (formData, token) => fetch(`${BASE_URL}users`, {
-  method
-});
+  method: 'POST',
+  body: formData,
+  headers: {
+    Token: token,
+  },
+})
+  .then(response => response.json());
