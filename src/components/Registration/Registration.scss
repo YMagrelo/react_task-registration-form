@@ -3,7 +3,7 @@
 .registration {
   position: relative;
   top: 60px;
-  padding: 140px 0 0 0;
+  padding: 155px 0 0 0;
   text-align: center;
 
   &__heading {
@@ -15,7 +15,7 @@
     width: 450px;
     margin: auto;
     line-height: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
 
   &__form {
@@ -24,26 +24,3 @@
     text-align: left;
   }
 }
-
-// .form {
-
-//   &__label {
-//     display: block;
-//     padding-bottom: 10px;
-//   }
-
-//   &__inputName,
-//   &__inputEmail {
-//     margin-bottom: 18px;
-//   }
-
-//   &__phonePrompt {
-//     font-size: 12px;
-//   }
-
-//   &__file-name {
-//     text-align: left;
-//     width: 300px;
-//     //margin-right: 100px;
-//   }
-// }

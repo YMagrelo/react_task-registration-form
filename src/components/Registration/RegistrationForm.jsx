@@ -78,7 +78,7 @@ Select your position
                   value={position.id}
                   id={position.name}
                 />
-                <span>{position.name}</span>
+                <span className="radio__itemTitle">{position.name}</span>
               </label>
             </div>
           ))}
@@ -95,7 +95,9 @@ Select your position
           placeholder="Upload your photo"
         />
       </div>
-      <button className="form__button" type="submit">Sing up now</button>
+      <div className="form__button-wrapper">
+        <button className="form__button" type="submit">Sing up now</button>
+      </div>
     </form>
   );
 };
