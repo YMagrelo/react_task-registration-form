@@ -1,4 +1,4 @@
-import { getUsers, getPositions } from '../api';
+import { getUsers, getPositions, getToken, registration } from '../api';
 
 const GET_USERS = 'GET_USERS';
 const IS_LAST_PAGE = 'IS_LAST_PAGE';
@@ -76,13 +76,19 @@ export const getPositionsThunk = () => async(dispatch) => {
 
 export const registrationThunk = (
   name, email, phone, positionId,
-) => (dispatch) => {
+) => async(dispatch) => {
   const formData = new FormData();
+  const fileField = document.querySelector('input[type="file"]');
 
   formData.append('name', name);
   formData.append('email', email);
   formData.append('phone', phone);
   formData.append('position_id', positionId);
-  console.log(formData.get('position_id'));
+  formData.append('photo', fileField.files[0]);
+  const data = await getToken();
+  const { token } = data;
 
-}
+  const response = await registration(formData, token);
+
+  console.log(response);
+};

@@ -5,3 +5,10 @@ export const getUsers = page => fetch(`${BASE_URL}users?page=${page}&count=6`)
 
 export const getPositions = () => fetch(`${BASE_URL}positions`)
   .then(response => response.json());
+
+export const getToken = () => fetch(`${BASE_URL}token`)
+  .then(response => response.json());
+
+export const registration = (formData, token) => fetch(`${BASE_URL}users`, {
+  method
+});

@@ -89,10 +89,8 @@ Select your position
       </label>
       <div>
         <input
-          component="input"
           className="form__fileInput form-control-file"
           type="file"
-          name="photo"
           id="photo"
           placeholder="Upload your photo"
         />
