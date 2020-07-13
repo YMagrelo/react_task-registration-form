@@ -12,6 +12,7 @@ import {
   registrationThunk,
 } from './redux/reducer';
 import { Registration } from './components/Registration/Registration';
+import { Footer } from './components/Footer';
 
 const App = (props) => {
   const {
@@ -38,6 +39,7 @@ const App = (props) => {
         positions={positions}
         registration={registration}
       />
+      <Footer />
     </div>
   );
 };

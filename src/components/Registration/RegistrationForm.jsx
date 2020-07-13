@@ -78,7 +78,7 @@ Select your position
                   value={position.id}
                   id={position.name}
                 />
-                <span className="radio__itemTitle">{position.name}</span>
+                <span className="radio__item-title">{position.name}</span>
               </label>
             </div>
           ))}
@@ -86,15 +86,17 @@ Select your position
       </div>
       <label htmlFor="photo" className="form__label">
           Photo
-      </label>
-      <div>
+          </label>
+      <label className="form__file-input-label">
+        Upload your photo
         <input
-          className="form__fileInput form-control-file"
+          className="form__file-input"
           type="file"
           id="photo"
           placeholder="Upload your photo"
         />
-      </div>
+      </label>
+
       <div className="form__button-wrapper">
         <button className="form__button" type="submit">Sing up now</button>
       </div>

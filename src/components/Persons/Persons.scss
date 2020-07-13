@@ -5,7 +5,7 @@
   max-width: 1024px;
   position: relative;
   top: 60px;
-  padding: 150px 60px 152px 60px;
+  padding: 150px 60px 105px 60px;
   margin: auto;
   background-color: $backgroundColor2;
 
@@ -25,7 +25,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 90px;
-    grid-row-gap: 60px;
+    //grid-row-gap: 0px;
     margin-bottom: 5px;
   }
 
@@ -45,4 +45,8 @@
   &__warning {
     text-align: center;
   }
+}
+
+@media (max-width: 768px) {
+  
 }

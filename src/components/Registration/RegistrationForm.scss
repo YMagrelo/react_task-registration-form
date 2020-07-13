@@ -3,7 +3,7 @@
 .form {
   &__label {
     display: block;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
   }
 
   &__inputName,
@@ -11,7 +11,7 @@
   &__inputPhone,
   &__fileInput {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
   }
 
   &__phonePrompt {
@@ -31,7 +31,38 @@
   &__button {
     width: 210px;
     height: 40px;
-    margin-top: 28px;
+    margin-top: 32px;
+  }
+
+  &__file-input {
+    display: none;
+  }
+
+  &__file-input-label {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    border-radius: 4px;
+    border: 0.2px solid #999;
+    color: #999;
+    padding: 7px 0 0 15px;
+    font-size: 14px;
+    opacity: 0.5;
+  }
+
+  &__file-input-label::after {
+    vertical-align: middle;
+    position: absolute;
+    content: 'Browse';
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border-left: 1px solid #999;
+    color: #000;
+    padding: 6px 0 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 1000;
+    top: 0px;
+    right: 19px;
   }
 }
 
@@ -41,7 +72,8 @@
     font-size: 14px;
   }
 
-  &__itemTitle {
+  &__item-title {
     padding-left: 12px;
+    font-size: 14px;
   }
 }
