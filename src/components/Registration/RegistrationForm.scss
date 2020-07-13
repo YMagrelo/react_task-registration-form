@@ -77,3 +77,9 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 380px) {
+  .form {
+    max-width: 350px;
+  }
+}

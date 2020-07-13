@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.scss';
 import classNames from 'classnames';
 import logo from '../../assets/logo/logo.svg';
@@ -6,7 +6,7 @@ import burgerIcon from '../../assets/logo/menu-icon.svg';
 import { MobileMenu } from './MobileMenu';
 
 export const Header = (props) => {
-  const [open, setOpen] = useState(false);
+  const { open, setOpen } = props;
 
   return (
     <header className={classNames('header-wrapper', { show: open })}>

@@ -27,12 +27,22 @@
 
 @media (max-width: 768px) {
   .registration {
-    border: 0.5px solid black;
     padding: 105px 0 116px 10px;
 
     &__heading {
       @include heading-1-tablet;
       margin-bottom: 18px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .registration {
+    max-width: 375px;
+    padding-left: 0;
+
+    &__underHeading {
+      max-width: 360px;
     }
   }
 }

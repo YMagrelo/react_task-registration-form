@@ -54,19 +54,14 @@
   }
 }
 
-@media (min-width: 380px) and (max-width: 780px) {
+@media (max-width: 380px) {
   .mobile-menu {
-    //  right: 340px;
-    //  bottom: 10px;
-    //  padding-top: 20px;
+     right: 150px;
 
-    //  &__logo {
-    //    position: relative;
-    //    bottom: 10px;
-    //  }
-
-    //  &__list {
-    //     width: 300px;
-    //  }
+     &__logo {
+       position: relative;
+       bottom: 0px;
+       padding-bottom: 9px;
+     }
   }
 }

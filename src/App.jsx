@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import './resets.scss';
+import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { Header } from './components/Header/Header';
 import { About } from './components/About';
@@ -24,9 +25,16 @@ const App = (props) => {
     registration
   } = props;
 
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="app-wrapper">
-      <Header />
+    <div
+      className={classNames('app-wrapper', { show: open })}
+    >
+      <Header
+        open={open}
+        setOpen={setOpen}
+      />
       <About />
       <Requirements />
       <Persons
