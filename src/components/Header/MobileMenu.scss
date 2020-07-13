@@ -3,18 +3,19 @@
 .mobile-menu {
   display: none;
   position: relative;
-  right: 152px;
-  bottom: 12px;
+  right: 296px;
+  bottom: 20px;
   height: 40px;
-  padding-top: 10px;
+  padding-top: 6px;
   background: $backgroundColor;
 
   &__logo {
-    padding: 2px 0 0 16px;
+    padding: 10px 0 20px 16px;
+    background-color: #fff;
   }
+
   &__list {
     position: relative;
-    top: 3px;
     width: 292px;
     height: 246px;
     padding: 26px 16px;
@@ -33,7 +34,7 @@
 
 .closeMenu {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 15px;
 
   &__inner {
@@ -55,17 +56,17 @@
 
 @media (min-width: 380px) and (max-width: 780px) {
   .mobile-menu {
-     right: 250px;
-     bottom: 10px;
-     padding-top: 20px;
+    //  right: 340px;
+    //  bottom: 10px;
+    //  padding-top: 20px;
 
-     &__logo {
-       position: relative;
-       bottom: 10px;
-     }
+    //  &__logo {
+    //    position: relative;
+    //    bottom: 10px;
+    //  }
 
-     &__list {
-        width: 385px;
-     }
+    //  &__list {
+    //     width: 300px;
+    //  }
   }
 }

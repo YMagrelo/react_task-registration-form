@@ -33,7 +33,7 @@
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 768px) {
   .about {
     height: 500px;
     padding: 58px 0 0 30px;
@@ -49,18 +49,18 @@
   }
 }
 
-@media (min-width: 380px) and (max-width: 500px) {
-  .content {
-    width: 350px;
-    white-space: nowrap;
+// @media (min-width: 380px) and (max-width: 500px) {
+//   .content {
+//     width: 350px;
+//     white-space: nowrap;
 
-    &__heading,
-    &__text {
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-}
+//     &__heading,
+//     &__text {
+//       overflow: hidden;
+//       text-overflow: ellipsis;
+//     }
+//   }
+// }
 
 @media (max-width: 380px) {
   .about {

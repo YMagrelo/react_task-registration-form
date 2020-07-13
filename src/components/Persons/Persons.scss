@@ -25,7 +25,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 90px;
-    //grid-row-gap: 0px;
     margin-bottom: 5px;
   }
 
@@ -48,5 +47,41 @@
 }
 
 @media (max-width: 768px) {
-  
+  .persons {
+    max-width: 768px;
+    padding: 110px 10px 80px 10px;
+
+    &__heading {
+      @include heading-1-tablet;
+    }
+
+    &__list {
+      grid-column-gap: 0;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .persons {
+    padding: 75px 10px 80px 10px;
+
+    &__heading {
+      @include heading-1-mobile;
+      margin-bottom: 10px;
+    }
+
+    &__underHeading {
+      margin-bottom: 16px;
+    }
+
+    &__list {
+      grid-template-columns: 1fr;
+      // height: 660px;
+      // overflow: hidden;
+      //background-color: blue;
+      //grid-template-rows: repeat(3, 1fr);
+    }
+  }
+
+
 }

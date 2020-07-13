@@ -48,9 +48,9 @@
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 768px) {
   .requirements {
-    padding: 112px 22px 0 30px;
+    padding: 112px 22px 115px 30px;
 
     &__heading {
       @include heading-1-tablet;
@@ -72,7 +72,7 @@
 
 @media (max-width: 380px) {
   .requirements {
-    padding: 53px 14px 0 14px;
+    padding: 53px 14px 72px 14px;
 
     &__content {
       flex-direction: column;
