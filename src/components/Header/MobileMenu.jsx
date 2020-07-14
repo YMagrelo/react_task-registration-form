@@ -1,5 +1,6 @@
 import React from 'react';
 import './MobileMenu.scss';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import logo from '../../assets/logo/logo.svg';
 
@@ -72,3 +73,8 @@ export const MobileMenu = ({ open, setOpen }) => (
 
   </div>
 );
+
+MobileMenu.propTypes = {
+  open: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired,
+};

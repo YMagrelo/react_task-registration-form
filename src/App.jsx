@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.scss';
 import './resets.scss';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { Header } from './components/Header/Header';
@@ -14,6 +15,7 @@ import {
 } from './redux/reducer';
 import { Registration } from './components/Registration/Registration';
 import { Footer } from './components/Footer';
+import { usersPropTypes, positionsPropTypes } from './propTypesConstant';
 
 const App = (props) => {
   const {
@@ -22,7 +24,7 @@ const App = (props) => {
     isLastPage,
     getPositions,
     positions,
-    registration
+    getRegistrationData,
   } = props;
 
   const [open, setOpen] = useState(false);
@@ -45,7 +47,7 @@ const App = (props) => {
       <Registration
         getPositions={getPositions}
         positions={positions}
-        registration={registration}
+        getRegistrationData={getRegistrationData}
       />
       <Footer />
     </div>
@@ -61,10 +63,19 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   getUsers: page => dispatch(getUsersThunk(page)),
   getPositions: () => dispatch(getPositionsThunk()),
-  registration:
+  getRegistrationData:
   (name, email, phone, positionId) => dispatch(
     registrationThunk(name, email, phone, positionId),
   ),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+App.propTypes = {
+  users: usersPropTypes.isRequired,
+  getUsers: PropTypes.func.isRequired,
+  isLastPage: PropTypes.bool.isRequired,
+  getPositions: PropTypes.func.isRequired,
+  positions: positionsPropTypes.isRequired,
+  getRegistrationData: PropTypes.func.isRequired,
+};

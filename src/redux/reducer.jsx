@@ -85,8 +85,8 @@ export const registrationThunk = (
   formData.append('phone', phone);
   formData.append('position_id', positionId);
   formData.append('photo', fileField.files[0]);
-  const data = await getToken();
-  const { token } = data;
+  const tokenData = await getToken();
+  const { token } = tokenData;
 
   const response = await registration(formData, token);
 

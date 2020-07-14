@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.scss';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import logo from '../../assets/logo/logo.svg';
 import burgerIcon from '../../assets/logo/menu-icon.svg';
@@ -50,4 +51,9 @@ export const Header = (props) => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  open: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired,
 };

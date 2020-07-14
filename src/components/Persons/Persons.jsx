@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Persons.scss';
+import PropTypes from 'prop-types';
 import { Person } from './Person';
+import { usersPropTypes } from '../../propTypesConstant';
 
 export const Persons = ({ users, getUsers, isLastPage }) => {
   const [page, setPage] = useState(1);
@@ -45,4 +47,10 @@ export const Persons = ({ users, getUsers, isLastPage }) => {
 
     </section>
   );
+};
+
+Persons.propTypes = {
+  users: usersPropTypes.isRequired,
+  getUsers: PropTypes.func.isRequired,
+  isLastPage: PropTypes.bool.isRequired,
 };

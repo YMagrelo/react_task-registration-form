@@ -1,5 +1,6 @@
 import React from 'react';
 import './RegistrationForm.scss';
+import PropTypes from 'prop-types';
 import { reduxForm, Field } from 'redux-form';
 import {
   required,
@@ -10,6 +11,7 @@ import {
   phoneNumber,
 } from '../../utils/validators';
 import { Input } from '../common/FormControl';
+import { positionsPropTypes } from '../../propTypesConstant';
 
 const RegistrationForm = (props) => {
   const { handleSubmit, positions } = props;
@@ -86,7 +88,7 @@ Select your position
       </div>
       <label htmlFor="photo" className="form__label">
           Photo
-          </label>
+      </label>
       <label className="form__file-input-label">
         Upload your photo
         <input
@@ -105,3 +107,8 @@ Select your position
 };
 
 export default reduxForm({ form: 'registration' })(RegistrationForm);
+
+RegistrationForm.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  positions: positionsPropTypes.isRequired,
+};

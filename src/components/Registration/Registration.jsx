@@ -1,15 +1,20 @@
 import React, { useEffect } from 'react';
 import './Registration.scss';
+import PropTypes from 'prop-types';
 import RegistrationForm from './RegistrationForm';
+import { positionsPropTypes } from '../../propTypesConstant';
 
-export const Registration = ({ getPositions, positions, registration }) => {
+export const Registration = ({
+  getPositions,
+  positions,
+  getRegistrationData,
+}) => {
   useEffect(() => {
     getPositions();
   }, []);
 
   const onSubmit = (formData) => {
-    console.log(formData);
-    registration(
+    getRegistrationData(
       formData.name, formData.email, formData.phone, formData.positionId,
     );
   };
@@ -29,4 +34,10 @@ export const Registration = ({ getPositions, positions, registration }) => {
       />
     </section>
   );
+};
+
+Registration.propTypes = {
+  getPositions: PropTypes.func.isRequired,
+  positions: positionsPropTypes.isRequired,
+  getRegistrationData: PropTypes.func.isRequired,
 };
